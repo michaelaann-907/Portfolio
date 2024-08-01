@@ -1,0 +1,366 @@
+/*  --- General Styles --- */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+}
+
+header {
+    padding: 20px;
+    background-color: #497777;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    background-color: #b9dfe0;
+    padding-top: 20px;
+    border-right: 1px solid #395051;
+    overflow-y: auto;
+    height: calc(100vh - 80px);
+    z-index: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.sidebar a {
+    display: block;
+    color: #000000;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-bottom: 1px solid #c1cbd1;
+}
+.sidebar a:hover {
+    background-color: #7bb2b4;
+}
+.sidebar hr {
+    border: 0;
+    border-top: 1px solid #000000;
+    margin: 10px 0;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    padding-top: 80px;
+    flex: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*  --- Specific styles for index.html --- */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #000000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #7abfc1;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+main > section:first-of-type {
+    margin-top: 200px;
+}
+
+section {
+    margin-bottom: 80px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2a4748;
+    padding-bottom: 10px;
+    color: #4d8284;
+}
+
+#about {
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #4d8284;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 30px; 
+    text-align: justify;
+    text-indent: 30px;
+}
+
+#about ul {
+    list-style: disc;
+    padding-left: 40px;
+    margin-bottom: 30px; 
+}
+
+#about li {
+    margin-bottom: 10px;
+}
+
+
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+#skills li {
+    background-color: #7abfc165;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.1em;
+}
+
+#programming ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+#programming li {
+    margin-bottom: 10px;
+}
+
+#projects .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#projects .project-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 40px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#projects .project-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #5c797a;
+}
+
+#projects .project-item p {
+    font-size: 1em;
+    color: #000000;
+}
+
+#projects .project-item a {
+    color: #628f91;
+    text-decoration: none;
+}
+
+#projects .project-item a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/*  --- Specific styles for seeshell.html --- */
+.top-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-top: 80px;
+    background-color: #e6edf2;
+}
+.top-container img {
+    max-width: 40%;
+    height: auto;
+    margin-right: 20px;
+}
+.top-container .text-content {
+    max-width: 600px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.image-gallery img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #c1cbd1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #98e3e3;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; 
+}
+
+
+
+
+/*  --- Specific styles for astroguard.html --- */
+#about p {
+    font-size: 1.1em; 
+    line-height: 1.8; 
+    margin-bottom: 20px; 
+    text-align: justify; 
+    text-indent: 30px;
+}
+
+#overview p {
+    font-size: 1.1em; 
+    line-height: 1.8; 
+    margin-bottom: 20px; 
+    text-align: justify;
+    text-indent: 30px; 
+}
+
+
+#purpose p {
+    font-size: 1.1em; 
+    line-height: 1.8; 
+    margin-bottom: 20px; 
+    text-align: justify; 
+    text-indent: 30px;
+}
+
+#access p {
+    font-size: 1.1em;
+    line-height: 1.8; 
+    margin-bottom: 20px; 
+    text-align: justify;
+}
+
+
+#access a {
+    color: #0077cc; 
+    text-decoration: none;
+}
+
+#access a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/*  --- Specific styles for nids.html --- */
+.nids-content p {
+    font-size: 1.1em; 
+    line-height: 1.7; 
+    margin-bottom: 20px; 
+    text-align: justify; 
+    text-indent: 25px;
+}
+
+
+
+
+
+/* ---  Specific styles for seeshell.html --- */
+.main-content ul {
+    list-style-type: disc;
+    margin-left: 20px; 
+    padding-left: 20px;
+}
+.main-content li {
+    margin-bottom: 10px; 
+}
+
+
+
+
+

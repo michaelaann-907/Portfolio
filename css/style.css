@@ -406,7 +406,7 @@ section h2 {
     text-decoration: none;
 }
 #code a {
-    color:#F7882F;
+    color:#F7882F !important;
     text-decoration: none;
 }
 

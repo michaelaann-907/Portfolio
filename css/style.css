@@ -1,11 +1,11 @@
-/*  --- General Styles --- */
+/* --- General Styles --- */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f0f4f8;
+    color: #000000;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
 }
@@ -16,7 +16,7 @@ body {
 
 header {
     padding: 20px;
-    background-color: #497777;
+    background-color: #6B7A8F;
     color: #fff;
     text-align: center;
     position: fixed;
@@ -35,28 +35,53 @@ header h1 {
     position: fixed;
     top: 80px;
     left: 0;
-    background-color: #b9dfe0;
+    background-color: #d7e7d4;
     padding-top: 20px;
-    border-right: 1px solid #395051;
+    border-right: 0px solid #395051;
     overflow-y: auto;
     height: calc(100vh - 80px);
     z-index: 0;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
+
 .sidebar a {
     display: block;
-    color: #000000;
+    color: #000000 !important; /* Ensure text color is black for sidebar links */
     padding: 10px 15px;
     text-decoration: none;
-    border-bottom: 1px solid #c1cbd1;
+    border-bottom: 1px solid #000000;
 }
+
 .sidebar a:hover {
-    background-color: #7bb2b4;
+    background-color: #8f9999;
+    color: #ffffff; 
 }
+
 .sidebar hr {
     border: 0;
-    border-top: 1px solid #000000;
+    border-top: 0px solid #000000;
     margin: 10px 0;
+}
+
+/* Default link color */
+a {
+    color: #F7882F; 
+    text-decoration: none; 
+}
+
+/* Link color on hover */
+a:hover {
+    color: #888888; 
+    text-decoration: underline; 
+}
+
+/* Link color when visited */
+a:visited {
+    color: #9e9e9e; 
+}
+
+/* Link color when active */
+a:active {
+    color: #d32f2f; 
 }
 
 .main-content {
@@ -66,10 +91,25 @@ header h1 {
     flex: 1;
 }
 
+footer {
+    background-color: #6b8f91;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; 
+    width: 100%;
+}
 
+/* Footer link styles */
+footer a {
+    color: #ffffff; 
+    text-decoration: none; 
+}
 
-
-
+footer a:hover {
+    color: #b7bebd; 
+    text-decoration: underline; 
+}
 
 
 
@@ -95,7 +135,7 @@ body {
 }
 
 header {
-    background-color: #7abfc1;
+    background-color: #6b8f91;
 }
 
 header h1 {
@@ -113,7 +153,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white;
+    color: white !important;
     text-decoration: none;
     font-size: 1.2em;
 }
@@ -145,7 +185,7 @@ section h2 {
     margin-bottom: 20px;
     border-bottom: 2px solid #2a4748;
     padding-bottom: 10px;
-    color: #4d8284;
+    color: #023047;
 }
 
 #about {
@@ -158,7 +198,7 @@ section h2 {
 #about h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #4d8284;
+    color: #023047;
 }
 
 #about p {
@@ -223,7 +263,7 @@ section h2 {
 #projects .project-item h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #5c797a;
+    color: #023047;
 }
 
 #projects .project-item p {
@@ -232,7 +272,7 @@ section h2 {
 }
 
 #projects .project-item a {
-    color: #628f91;
+    color: #023047;
     text-decoration: none;
 }
 
@@ -279,13 +319,16 @@ section h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    background-color: #98e3e3;
-    color: #000000;
-    text-align: center;
-    padding: 10px;
-    margin-top: auto; 
+.main-content ul {
+    list-style-type: disc;
+    margin-left: 20px; 
+    padding-left: 20px;
 }
+.main-content li {
+    margin-bottom: 10px; 
+}
+
+
 
 
 
@@ -325,7 +368,7 @@ footer {
 
 
 #access a {
-    color: #0077cc; 
+    color: #645685; 
     text-decoration: none;
 }
 
@@ -347,18 +390,6 @@ footer {
 }
 
 
-
-
-
-/* ---  Specific styles for seeshell.html --- */
-.main-content ul {
-    list-style-type: disc;
-    margin-left: 20px; 
-    padding-left: 20px;
-}
-.main-content li {
-    margin-bottom: 10px; 
-}
 
 
 

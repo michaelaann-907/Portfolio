@@ -319,6 +319,10 @@ section h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+#visuals a{
+    color:#F7882F;
+    text-decoration: none;
+}
 .main-content ul {
     list-style-type: disc;
     margin-left: 20px; 
@@ -368,7 +372,7 @@ section h2 {
 
 
 #access a {
-    color: #645685; 
+    color: #F7882F; 
     text-decoration: none;
 }
 
@@ -389,8 +393,18 @@ section h2 {
     text-indent: 25px;
 }
 
+#project a {
+    color:#F7882F;
+    text-decoration: none;
+}
 
 
+
+/*  --- Specific styles for lms.html --- */
+#sprint1 a{
+    color:#F7882F;
+    text-decoration: none;
+}
 
 
 

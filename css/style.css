@@ -401,11 +401,12 @@ section h2 {
 
 
 /*  --- Specific styles for lms.html --- */
-#sprint1 a{
+#sprint1 a {
     color:#F7882F;
     text-decoration: none;
 }
-
-
-
+#code a {
+    color:#F7882F;
+    text-decoration: none;
+}
 

@@ -1,412 +1,379 @@
 /* --- General Styles --- */
+/* --- For index.html --- */
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    color: #000000;
-    background-color: #ffffff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #C1C6D1;
+    background-color: #131b2b;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 body {
     flex: 1;
 }
 
+/* Header */
 header {
-    padding: 20px;
-    background-color: #6B7A8F;
-    color: #fff;
+    background-color: #0D1B2A;
+    padding: 60px 20px;
     text-align: center;
+    border-bottom: 3px solid #1B263B;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5em;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #415A77;
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 200px 20px;
+    flex: 1;
+}
+
+/* Section Backgrounds */
+section {
+    background-color: #1B263B;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #0D1B2A;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+p, ul {
+    line-height: 1.8;
+    font-size: 1.1em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.project-item {
+    background-color: #27374D;
+    padding: 25px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.project-item h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.project-item a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-item a:hover {
+    color: #415A77;
+}
+
+.project-item p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Footer */
+footer {
+    background-color: #0D1B2A;
+    padding: 20px 20px;
+    text-align: center;
+    border-top: 3px solid #1B263B;
+}
+
+footer p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #415A77;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .project-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 900px) {
+    nav ul {
+        gap: 40px;
+    }
+
+    header h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 2.8em;
+    }
+
+    p, ul {
+        font-size: 1.2em;
+    }
+}
+
+
+
+/* --- General Styles --- */
+/* --- For all the project pages --- */
+html, body {
+    margin: 12px;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Header Styles --- */
+header {
+    background-color: #0D1B2A;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 3px solid #1B263B;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1;
-}
-header h1 {
-    margin: 0;
-    font-size: 2em;
+    z-index: 1000;
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+/* --- Sidebar Styles --- */
 .sidebar {
-    width: 250px;
+    width: 240px;
+    background-color: #1B263B;
+    padding: 20px;
     position: fixed;
-    top: 80px;
+    top: 60px;
     left: 0;
-    background-color: #d7e7d4;
-    padding-top: 20px;
-    border-right: 0px solid #395051;
+    bottom: 0;
+    height: calc(100vh - 60px);
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
+    z-index: 500;
     overflow-y: auto;
-    height: calc(100vh - 80px);
-    z-index: 0;
+    border-right: 3px solid #27374D;
 }
 
 .sidebar a {
     display: block;
-    color: #000000 !important; /* Ensure text color is black for sidebar links */
-    padding: 10px 15px;
+    color: #ffffff;
     text-decoration: none;
-    border-bottom: 1px solid #000000;
+    font-size: 1.2em;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sidebar a:hover {
-    background-color: #8f9999;
-    color: #ffffff; 
-}
-
-.sidebar hr {
-    border: 0;
-    border-top: 0px solid #000000;
-    margin: 10px 0;
-}
-
-/* Default link color */
-a {
-    color: #F7882F; 
-    text-decoration: none; 
-}
-
-/* Link color on hover */
-a:hover {
-    color: #888888; 
-    text-decoration: underline; 
-}
-
-/* Link color when visited */
-a:visited {
-    color: #9e9e9e; 
-}
-
-/* Link color when active */
-a:active {
-    color: #d32f2f; 
-}
-
-.main-content {
-    margin-left: 250px;
-    padding: 20px;
-    padding-top: 80px;
-    flex: 1;
-}
-
-footer {
-    background-color: #6b8f91;
+    background-color: #27374D;
     color: #ffffff;
-    text-align: center;
-    padding: 10px;
-    margin-top: auto; 
-    width: 100%;
 }
 
-/* Footer link styles */
+/* --- Main Content Styles --- */
+.main-content {
+    margin-left: 240px;
+    margin-top: 60px;
+    padding: 40px;
+    background-color: #1B263B;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    min-height: calc(100vh - 60px - 70px);
+    overflow-y: auto;
+}
+
+/* --- Section Styles --- */
+.section {
+    background-color: #27374D;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Footer Styles --- */
+footer {
+    background-color: #0D1B2A;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid #1B263B;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+footer p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1em;
+}
+
 footer a {
-    color: #ffffff; 
-    text-decoration: none; 
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #b7bebd; 
-    text-decoration: underline; 
+    color: #415A77;
 }
 
-
-
-
-
-
-
-/*  --- Specific styles for index.html --- */
-body, h1, h2, p, ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f2f5;
-    color: #000000;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-header {
-    background-color: #6b8f91;
-}
-
-header h1 {
-    font-size: 2.5em;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-header nav ul li {
-    margin: 0 20px;
-}
-
-header nav ul li a {
-    color: white !important;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 100px;
-}
-
-main > section:first-of-type {
-    margin-top: 200px;
-}
-
-section {
-    margin-bottom: 80px;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #2a4748;
-    padding-bottom: 10px;
-    color: #023047;
-}
-
-#about {
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#about h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #023047;
-}
-
-#about p {
-    font-size: 1.2em;
-    line-height: 1.8;
-    margin-bottom: 30px; 
-    text-align: justify;
-    text-indent: 30px;
-}
-
-#about ul {
-    list-style: disc;
-    padding-left: 40px;
-    margin-bottom: 30px; 
-}
-
-#about li {
-    margin-bottom: 10px;
-}
-
-
-#skills ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    list-style: none;
-    padding: 0;
-}
-
-#skills li {
-    background-color: #7abfc165;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 1.1em;
-}
-
-#programming ul {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-#programming li {
-    margin-bottom: 10px;
-}
-
-#projects .project-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-#projects .project-item {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    flex: 1 1 calc(33.333% - 40px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#projects .project-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #023047;
-}
-
-#projects .project-item p {
+/* --- Button Styles --- */
+.button {
+    display: inline-block;
+    background-color: #0D1B2A;
+    color: #ffffff;
+    padding: 15px 25px;
     font-size: 1em;
-    color: #000000;
-}
-
-#projects .project-item a {
-    color: #023047;
+    text-align: center;
     text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #1B263B;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#projects .project-item a:hover {
-    text-decoration: underline;
-}
-
-
-
-
-
-
-
-
-/*  --- Specific styles for seeshell.html --- */
-.top-container {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    margin-top: 80px;
-    background-color: #e6edf2;
-}
-.top-container img {
-    max-width: 40%;
-    height: auto;
-    margin-right: 20px;
-}
-.top-container .text-content {
-    max-width: 600px;
+.button:hover {
+    background-color: #1B263B;
+    color: #ffffff;
 }
 
 .image-gallery {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-around;
-    margin-top: 20px;
 }
-.image-gallery img {
+
+.gallery-item {
     max-width: 100%;
     height: auto;
-    border: 1px solid #c1cbd1;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-height: 600px;
 }
 
-#visuals a{
-    color:#F7882F;
-    text-decoration: none;
-}
-.main-content ul {
-    list-style-type: disc;
-    margin-left: 20px; 
-    padding-left: 20px;
-}
-.main-content li {
-    margin-bottom: 10px; 
+.top-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-
-
-
-
-
-/*  --- Specific styles for astroguard.html --- */
-#about p {
-    font-size: 1.1em; 
-    line-height: 1.8; 
-    margin-bottom: 20px; 
-    text-align: justify; 
-    text-indent: 30px;
+.logo-and-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-#overview p {
-    font-size: 1.1em; 
-    line-height: 1.8; 
-    margin-bottom: 20px; 
-    text-align: justify;
-    text-indent: 30px; 
+.seeshell-logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    flex-shrink: 0;
+}
+
+.text-content {
+    flex: 1;
 }
 
 
-#purpose p {
-    font-size: 1.1em; 
-    line-height: 1.8; 
-    margin-bottom: 20px; 
-    text-align: justify; 
-    text-indent: 30px;
+/* --- Section Styles --- */
+.section-seeshell {
+    background-color: #27374D;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
-#access p {
-    font-size: 1.1em;
-    line-height: 1.8; 
-    margin-bottom: 20px; 
-    text-align: justify;
-}
-
-
-#access a {
-    color: #F7882F; 
-    text-decoration: none;
-}
-
-#access a:hover {
-    text-decoration: underline;
-}
-
-
-
-
-
-/*  --- Specific styles for nids.html --- */
-.nids-content p {
-    font-size: 1.1em; 
-    line-height: 1.7; 
-    margin-bottom: 20px; 
-    text-align: justify; 
-    text-indent: 25px;
-}
-
-#project a {
-    color:#F7882F;
-    text-decoration: none;
-}
-
-
-
-/*  --- Specific styles for lms.html --- */
-#sprint1 a {
-    color:#F7882F;
-    text-decoration: none;
-}
-#code a {
-    color:#F7882F !important;
-    text-decoration: none;
-}
-

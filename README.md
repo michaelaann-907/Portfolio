@@ -18,4 +18,4 @@ Visit my portfolio website to learn more about each project and see them in acti
 
 ## Contact
 
-If you'd like to connect or have any questions, feel free to reach out: [pierce.michaelaann@gmail.com](mailto:pierce.michaelaann@gmail.com)
+If you'd like to connect or have any questions, feel free to reach out: [pierce.michaelaann@gmail.com](mailto:michaelaann907@gmail.com)
